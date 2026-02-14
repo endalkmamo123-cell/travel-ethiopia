@@ -1,0 +1,438 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <!--
+  Traveling Ethiopia (Figure 5) -- Cartesian coordinates (meters)
+  Mapping (city -> (x, y)):
+    Addis_Ababa: (0.0, 0.0)
+    Debre_Birhan: (2.0, 3.0)
+    Ambo: (-2.0, 1.0)
+    Nekemte: (-8.0, 5.0)
+    Gimbi: (-9.0, 4.0)
+    Dembi_Dolo: (-11.0, 6.0)
+    Gambella: (-13.0, 7.0)
+    Gore: (-10.0, 3.0)
+    Tepi: (-9.0, 2.0)
+    Mizan_Teferi: (-8.0, 1.0)
+    Bonga: (-7.0, 0.0)
+    Jimma: (-6.0, 1.0)
+    Bedelle: (-8.0, 3.0)
+    Wolaita_Sodo: (-3.0, -3.0)
+    Dawro: (-4.5, -1.5)
+    Dilla: (-2.0, -6.0)
+    Hawassa: (1.0, -3.0)
+    Hossana: (0.0, -1.0)
+    Shashemene: (1.0, -1.0)
+    Butajira: (0.5, 0.2)
+    Wolkite: (-1.0, 0.0)
+    Assela: (3.0, 0.5)
+    Adama: (4.0, 1.0)
+    Matahara: (5.0, 1.5)
+    Awash: (6.0, 2.5)
+    Chiro: (7.0, 3.0)
+    Dire_Dawa: (9.0, 3.5)
+    Harar: (8.0, 2.5)
+    Babille: (9.0, 2.0)
+    Jigjiga: (11.0, 3.5)
+    Dega_Habur: (10.0, 1.5)
+    Kebri_Dehar: (9.0, 0.5)
+    Gode: (11.0, -1.0)
+    Goba: (4.0, -1.5)
+    Dodolla: (3.0, -1.0)
+    Assasa: (2.0, -0.5)
+    Bale: (5.0, -2.0)
+    Sof_Oumer: (5.0, -1.8)
+  -->
+  <world name="traveling_ethiopia_figure5">
+    <gravity>0 0 -9.81</gravity>
+    <physics name="ode" type="ode">
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+    </physics>
+
+    <include><uri>model://ground_plane</uri></include>
+    <include><uri>model://sun</uri></include>
+
+    <model name="Addis_Ababa">
+      <static>true</static>
+      <pose>0.0 0.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.8 0.2 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Debre_Birhan">
+      <static>true</static>
+      <pose>2.0 3.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.6 0.6 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Ambo">
+      <static>true</static>
+      <pose>-2.0 1.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.3 0.6 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Nekemte">
+      <static>true</static>
+      <pose>-8.0 5.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.4 0.8 0.4 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Gimbi">
+      <static>true</static>
+      <pose>-9.0 4.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.9 0.6 0.3 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Dembi_Dolo">
+      <static>true</static>
+      <pose>-11.0 6.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.6 0.3 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Gambella">
+      <static>true</static>
+      <pose>-13.0 7.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.3 0.8 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Gore">
+      <static>true</static>
+      <pose>-10.0 3.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.8 0.2 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Tepi">
+      <static>true</static>
+      <pose>-9.0 2.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.6 0.6 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Mizan_Teferi">
+      <static>true</static>
+      <pose>-8.0 1.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.3 0.6 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Bonga">
+      <static>true</static>
+      <pose>-7.0 0.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.4 0.8 0.4 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Jimma">
+      <static>true</static>
+      <pose>-6.0 1.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.9 0.6 0.3 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Bedelle">
+      <static>true</static>
+      <pose>-8.0 3.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.6 0.3 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Wolaita_Sodo">
+      <static>true</static>
+      <pose>-3.0 -3.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.3 0.8 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Dawro">
+      <static>true</static>
+      <pose>-4.5 -1.5 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.8 0.2 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Dilla">
+      <static>true</static>
+      <pose>-2.0 -6.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.6 0.6 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Hawassa">
+      <static>true</static>
+      <pose>1.0 -3.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.3 0.6 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Hossana">
+      <static>true</static>
+      <pose>0.0 -1.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.4 0.8 0.4 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Shashemene">
+      <static>true</static>
+      <pose>1.0 -1.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.9 0.6 0.3 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Butajira">
+      <static>true</static>
+      <pose>0.5 0.2 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.6 0.3 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Wolkite">
+      <static>true</static>
+      <pose>-1.0 0.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.3 0.8 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Assela">
+      <static>true</static>
+      <pose>3.0 0.5 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.8 0.2 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Adama">
+      <static>true</static>
+      <pose>4.0 1.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.6 0.6 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Matahara">
+      <static>true</static>
+      <pose>5.0 1.5 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.3 0.6 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Awash">
+      <static>true</static>
+      <pose>6.0 2.5 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.4 0.8 0.4 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Chiro">
+      <static>true</static>
+      <pose>7.0 3.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.9 0.6 0.3 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Dire_Dawa">
+      <static>true</static>
+      <pose>9.0 3.5 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.6 0.3 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Harar">
+      <static>true</static>
+      <pose>8.0 2.5 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.3 0.8 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Babille">
+      <static>true</static>
+      <pose>9.0 2.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.8 0.2 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Jigjiga">
+      <static>true</static>
+      <pose>11.0 3.5 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.6 0.6 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Dega_Habur">
+      <static>true</static>
+      <pose>10.0 1.5 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.3 0.6 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Kebri_Dehar">
+      <static>true</static>
+      <pose>9.0 0.5 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.4 0.8 0.4 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Gode">
+      <static>true</static>
+      <pose>11.0 -1.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.9 0.6 0.3 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Goba">
+      <static>true</static>
+      <pose>4.0 -1.5 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.6 0.3 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Dodolla">
+      <static>true</static>
+      <pose>3.0 -1.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.3 0.8 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Assasa">
+      <static>true</static>
+      <pose>2.0 -0.5 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.8 0.2 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Bale">
+      <static>true</static>
+      <pose>5.0 -2.0 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.6 0.6 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="Sof_Oumer">
+      <static>true</static>
+      <pose>5.0 -1.8 0.12 0 0 0</pose>
+      <link name="l">
+        <visual name="v">
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.3 0.6 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <gui fullscreen="false"/>
+  </world>
+</sdf>
