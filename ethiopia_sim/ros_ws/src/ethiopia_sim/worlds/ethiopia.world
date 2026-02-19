@@ -1,0 +1,313 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="ethiopia_search">
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <include><uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground Plane</uri></include>
+    <include><uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri></include>
+
+    <!-- Cities -->
+    <model name="Gambella">
+      <static>true</static><pose>0 0 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry><material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material></visual></link>
+    </model>
+    <model name="Dembi_Dollo">
+      <static>true</static><pose>2 -2 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Gimbi">
+      <static>true</static><pose>4 -2 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Nekemete">
+      <static>true</static><pose>6 0 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Gore">
+      <static>true</static><pose>2 2 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Tepi">
+      <static>true</static><pose>4 4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Mezan_Teferi">
+      <static>true</static><pose>6 4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Bonga">
+      <static>true</static><pose>6 6 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Jimma">
+      <static>true</static><pose>8 6 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Bedelle">
+      <static>true</static><pose>8 2 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Dawro">
+      <static>true</static><pose>10 6 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Wolaita_Sodo">
+      <static>true</static><pose>12 6 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Arba_Minch">
+      <static>true</static><pose>14 6 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Wolkite">
+      <static>true</static><pose>10 2 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Worabe">
+      <static>true</static><pose>12 2 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Hossana">
+      <static>true</static><pose>12 0 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Buta_Jirra">
+      <static>true</static><pose>14 0 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Ambo">
+      <static>true</static><pose>8 0 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Addis_Ababa">
+      <static>true</static><pose>6 -2 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry><material><ambient>0 0 1 1</ambient><diffuse>0 0 1 1</diffuse></material></visual></link>
+    </model>
+    <model name="Debre_Birhan">
+      <static>true</static><pose>4 -4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Adama">
+      <static>true</static><pose>6 -4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Matahara">
+      <static>true</static><pose>8 -4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Awash">
+      <static>true</static><pose>10 -4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Chiro">
+      <static>true</static><pose>12 -4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Dire_Dawa">
+      <static>true</static><pose>14 -4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Harar">
+      <static>true</static><pose>16 -4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Babile">
+      <static>true</static><pose>18 -4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Jigjiga">
+      <static>true</static><pose>20 -4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Dega_Habur">
+      <static>true</static><pose>22 -4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Kebri_Dehar">
+      <static>true</static><pose>24 -4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Gode">
+      <static>true</static><pose>26 -4 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Batu">
+      <static>true</static><pose>10 -2 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Shashemene">
+      <static>true</static><pose>12 -2 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Hawassa">
+      <static>true</static><pose>14 -2 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Dilla">
+      <static>true</static><pose>16 -2 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Assella">
+      <static>true</static><pose>8 -6 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Assasa">
+      <static>true</static><pose>10 -6 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Dodolla">
+      <static>true</static><pose>12 -6 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Bale">
+      <static>true</static><pose>14 -6 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Goba">
+      <static>true</static><pose>16 -6 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    <model name="Sof_Oumer">
+      <static>true</static><pose>18 -6 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+
+    <!-- Mobile robot model controlled via Gazebo Sim DiffDrive system plugin.
+         It listens on /model/ethiopia_bot/cmd_vel (Twist) and publishes
+         odometry on /model/ethiopia_bot/odometry. -->
+    <model name="ethiopia_bot">
+      <pose>0 0 0.1 0 0 0</pose>
+
+      <!-- Base -->
+      <link name="base_link">
+        <inertial>
+          <mass>5.0</mass>
+          <inertia>
+            <ixx>0.1</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
+            <iyy>0.1</iyy><iyz>0.0</iyz><izz>0.1</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.4 0.3 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.4 0.3 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+      </link>
+
+      <!-- Left wheel -->
+      <link name="left_wheel">
+        <inertial>
+          <mass>2.0</mass>
+          <inertia>
+            <ixx>0.01</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
+            <iyy>0.01</iyy><iyz>0.0</iyz><izz>0.01</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>0.1</radius>
+              <length>0.05</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.1</radius>
+              <length>0.05</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+
+      <!-- Right wheel -->
+      <link name="right_wheel">
+        <inertial>
+          <mass>2.0</mass>
+          <inertia>
+            <ixx>0.01</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
+            <iyy>0.01</iyy><iyz>0.0</iyz><izz>0.01</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>0.1</radius>
+              <length>0.05</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.1</radius>
+              <length>0.05</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+
+      <!-- Joints -->
+      <joint name="left_wheel_joint" type="revolute">
+        <parent>base_link</parent>
+        <child>left_wheel</child>
+        <pose>0.1 0.175 -0.05 -1.5707 0 0</pose>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1e16</lower>
+            <upper>1e16</upper>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="right_wheel_joint" type="revolute">
+        <parent>base_link</parent>
+        <child>right_wheel</child>
+        <pose>0.1 -0.175 -0.05 -1.5707 0 0</pose>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1e16</lower>
+            <upper>1e16</upper>
+          </limit>
+        </axis>
+      </joint>
+
+      <!-- Differential drive controller using Gazebo Sim system plugin -->
+      <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+        <left_joint>left_wheel_joint</left_joint>
+        <right_joint>right_wheel_joint</right_joint>
+        <wheel_separation>0.35</wheel_separation>
+        <wheel_radius>0.1</wheel_radius>
+        <odom_publish_frequency>50</odom_publish_frequency>
+        <topic>cmd_vel</topic>
+      </plugin>
+    </model>
+  </world>
+</sdf>
+

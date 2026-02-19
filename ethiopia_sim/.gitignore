@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+ENV/
+env/
+
+# ROS 2 / colcon build artifacts
+ros_ws/build/
+ros_ws/install/
+ros_ws/log/
+
+# Gazebo / gz sim caches and logs
+~/.gazebo/
+~/.gz/
+
+# Keep only the top-level duplicate as source of truth
+/ethiopia_sim/
