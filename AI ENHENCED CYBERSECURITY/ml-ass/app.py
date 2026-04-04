@@ -174,6 +174,9 @@ tab1, tab2, tab3, tab4 = st.tabs(["🕵️ Signature Deep-Scan", "📡 Live Inte
 with tab1:
     st.subheader("Manual Event Reconstitution")
     
+    if model_choice == "Regression-Folder Model":
+        st.warning("⚠️ **Regression Model Selected**: This tab will show duration prediction instead of threat classification. For intrusion detection, switch to 'Standard Classification' in the sidebar.")
+    
     with st.form("deep_scan_form"):
         col1, col2, col3 = st.columns(3)
         
@@ -267,29 +270,43 @@ with tab1:
                 # Scaling
                 X_scaled = scaler.transform(final_X)
 
-                # Prediction
-                pred_idx = model.predict(X_scaled)[0]
-                pred_prob = model.predict_proba(X_scaled)[0]
-                
-                threat_type = encoders['target'].inverse_transform([pred_idx])[0]
-                confidence = pred_prob[pred_idx] * 100
-                
-                color = "#39FF14" if threat_type == 'normal' else "#FF3131"
-                st.markdown(f"""
-                    <div style="background: rgba(0,0,0,0.5); padding: 25px; border-radius: 12px; border-left: 8px solid {color};">
-                        <h2 style="color:{color}; margin:0;">RESULT: {threat_type.upper()}</h2>
-                        <h4 style="margin:5px 0;">Neural Confidence: {confidence:.2f}%</h4>
-                    </div>
-                """, unsafe_allow_html=True)
-                
-                proba_df = pd.DataFrame({
-                    'Class': encoders['target'].classes_,
-                    'Proba': pred_prob * 100
-                }).sort_values('Proba')
-                
-                fig = px.bar(proba_df, x='Proba', y='Class', orientation='h', color='Proba', color_continuous_scale='Turbo')
-                fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font_color='#fff')
-                st.plotly_chart(fig, use_container_width=True)
+                # Check if model is classifier or regressor
+                if hasattr(model, 'predict_proba'):
+                    # Classification model
+                    pred_idx = model.predict(X_scaled)[0]
+                    pred_prob = model.predict_proba(X_scaled)[0]
+                    
+                    threat_type = encoders['target'].inverse_transform([pred_idx])[0]
+                    confidence = pred_prob[pred_idx] * 100
+                    
+                    color = "#39FF14" if threat_type == 'normal' else "#FF3131"
+                    st.markdown(f"""
+                        <div style="background: rgba(0,0,0,0.5); padding: 25px; border-radius: 12px; border-left: 8px solid {color};">
+                            <h2 style="color:{color}; margin:0;">RESULT: {threat_type.upper()}</h2>
+                            <h4 style="margin:5px 0;">Neural Confidence: {confidence:.2f}%</h4>
+                        </div>
+                    """, unsafe_allow_html=True)
+                    
+                    proba_df = pd.DataFrame({
+                        'Class': encoders['target'].classes_,
+                        'Proba': pred_prob * 100
+                    }).sort_values('Proba')
+                    
+                    fig = px.bar(proba_df, x='Proba', y='Class', orientation='h', color='Proba', color_continuous_scale='Turbo')
+                    fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font_color='#fff')
+                    st.plotly_chart(fig, use_container_width=True)
+                else:
+                    # Regression model - show predicted duration
+                    pred_value = model.predict(X_scaled)[0]
+                    actual_pred = np.expm1(pred_value)  # Assuming log-transformed target
+                    
+                    st.markdown(f"""
+                        <div style="background: rgba(0,0,0,0.5); padding: 25px; border-radius: 12px; border-left: 8px solid #0088ff;">
+                            <h2 style="color:#0088ff; margin:0;">REGRESSION RESULT</h2>
+                            <h4 style="margin:5px 0;">Predicted Duration: {actual_pred:.4f} seconds</h4>
+                            <p style="margin:0; opacity:0.7;">Note: Regression model selected. For classification, switch to Standard Classification model.</p>
+                        </div>
+                    """, unsafe_allow_html=True)
                 
             except Exception as e:
                 st.error(f"Analysis Failed: Column Mismatch. Please check if model version matches the UI logic. Log: {e}")
